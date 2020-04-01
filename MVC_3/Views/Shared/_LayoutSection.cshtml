@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>標題</title>
+    @RenderSection("Style", false)
+
+</head>
+<body>
+    <header class="page-header">
+        @RenderSection("header", true)
+    </header>
+    <div id=body>
+        @RenderBody()
+    </div>
+    <footer>
+        @RenderSection("footer", true)
+    </footer>
+        @RenderSection("script", false)
+
+</body>
+</html>

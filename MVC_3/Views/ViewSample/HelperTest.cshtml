@@ -1,0 +1,26 @@
+﻿@using MVC_3.Models;
+@model List<Person>
+
+@{
+    ViewBag.Title = "Helper";
+    List<Person> people = Model;
+}
+@helpertest(people)
+
+@helper helpertest(List<Person> people)
+{
+    <table>
+    @for (int i = 0; i < 3; i++)
+    {
+        <tr>
+            <td>@people[i].name</td>
+            <td>@people[i].age</td>
+            <td>@people[i].city</td>
+            <td>@people[i].addr</td>
+            <td>@people[i].phone</td>
+        </tr>
+    }
+
+    </table>
+}
+

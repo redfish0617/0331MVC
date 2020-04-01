@@ -1,0 +1,16 @@
+﻿
+@using MVC_3.Controllers;
+@model MVC_3.Models.ValidTest
+@{
+
+    ViewBag.Title = "Index";
+     Html.EnableClientValidation(true); Html.EnableUnobtrusiveJavaScript(true); 
+
+}
+
+<h2>驗證練習</h2>
+@using (Html.BeginForm("Login", "Test"))
+{
+    @Html.EditorForModel()
+    <button type="submit" name="submit" value="檢查">認證</button>
+}

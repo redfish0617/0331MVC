@@ -1,0 +1,21 @@
+﻿
+
+@using MVC_3.Models;
+@model List<Class>
+@{
+    ViewBag.Title = "ModelTest";
+    List<Class> classes = Model;
+}
+<table> 
+    @for(int i=0;i<3;i++)
+    {
+    <tr>
+        <td>@classes[i].a</td>
+        <td>@classes[i].b</td>
+        <td>@classes[i].c</td>
+        <td>@classes[i].d</td>
+        <td>@classes[i].e</td>
+    </tr>
+    }
+
+</table>

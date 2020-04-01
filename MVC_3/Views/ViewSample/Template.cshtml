@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Template";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("Login", "Sample"))
+{
+    <table class="table table-bordered">
+        <tr>
+            <td>帳號</td>
+            <td>@Html.TextBox("UserID")</td>
+        </tr>
+        <tr>
+            <td>密碼</td>
+            <td>@Html.Password("Password")</td>
+        </tr>
+        <tr>
+            <td colspan="2">@Html.CheckBox("IsPersistent",false) 保持登入狀態</td>
+        </tr>
+        <tr>
+            <td><button type="submit"name="Signin"value="登入">確認</button></td>
+            <td><button type="reset">取消</button></td>
+        </tr>
+    </table>
+}

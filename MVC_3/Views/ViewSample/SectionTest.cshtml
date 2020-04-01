@@ -1,0 +1,26 @@
+﻿@using MVC_3.Models;
+@model List<Person>
+@{
+    Layout = "~/Views/Shared/_LayoutSection.cshtml";
+    ViewBag.Title = "SectionTest";
+    List < Person >people = Model;
+}
+
+<h2>SectionTest</h2>
+@*@section styles{ @Styles.Render("~/Content/css") }
+@section scripts{@Scripts.Render("~/bundles/jquery") }*@
+@section header{"李泓諭 – Section練習"}
+@section footer{"李泓諭-版權所有"}
+<table>
+    @for(int i = 0;i< 3;i++)
+        {
+    <tr>
+        <td>@people[i].name</td>
+        <td>@people[i].age</td>
+        <td>@people[i].city</td>
+        <td>@people[i].addr</td>
+        <td>@people[i].phone</td>
+    </tr>
+        }
+
+</table>

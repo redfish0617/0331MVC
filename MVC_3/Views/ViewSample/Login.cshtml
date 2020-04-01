@@ -1,0 +1,13 @@
+﻿@model MVC_3.Models.vmLogin
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("Login2", "Sample"))
+{
+
+    @Html.EditorForModel();
+    <button type="submit" name="Signin" value="登入">確認</button>
+    <button type="reset">取消</button>
+}
